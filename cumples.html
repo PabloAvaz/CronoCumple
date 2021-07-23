@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cumples</title>
+    <link rel="stylesheet" href="lib/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <script src="js/pquery.js"></script>
+    <script defer src="js/clases.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo centrar">
+            <img alt="logo" />
+        </div>
+
+        <div class="search">
+            <input class="buscador" id="buscador" type="search" list="personas" placeholder="Busca a una persona" />
+            <div>
+                <i id="filtros" class="fas fa-filter"></i>
+                <div class="filters-form oculto">
+                    <input name="filtro" value="baloteli" id="baloteli" type="checkbox" /><label for="baloteli">Baloteli</label><br />
+                    <input name="filtro" value="marasecta" id="marasecta" type="checkbox" /><label for="marasecta">Marasecta</label>
+                </div>
+            </div>
+
+            <datalist id="personas">
+          <!-- Marasecta -->
+          <option data-filter="marasecta">Juan</option>
+          <option data-filter="marasecta">Adolfo</option>
+          <option data-filter="marasecta">Dominchi</option>
+          <option data-filter="marasecta">Bugallo</option>
+          <option data-filter="marasecta">Roma</option>
+          <!-- Baloteli -->
+          <option data-filter="baloteli">Trabis</option>
+          <option data-filter="baloteli">Wokero</option>
+          <option data-filter="baloteli">zHaaldz</option>
+          <option data-filter="baloteli">Byraa</option>
+          <option data-filter="baloteli">Cesx</option>
+        </datalist>
+        </div>
+
+        <div class="otros centrar">
+            <span> Añadir(+)</span>
+        </div>
+    </header>
+    <main class="cron">
+        <div class="cron-elem" id="anho">
+            <span class="cron-time">00</span>
+            <small class="cron-label">Años</small>
+        </div>
+        <div class="cron-elem" id="mes">
+            <span class="cron-time">00</span>
+            <small class="cron-label">Meses</small>
+        </div>
+        <div class="cron-elem" id="dia">
+            <span class="cron-time">00</span>
+            <small class="cron-label">Dias</small>
+        </div>
+        <div class="cron-elem" id="hora">
+            <span class="cron-time">00</span>
+            <small class="cron-label">Horas</small>
+        </div>
+        <div class="cron-elem" id="minuto">
+            <span class="cron-time">00</span>
+            <small class="cron-label">Minutos</small>
+        </div>
+        <div class="cron-elem" id="segundo">
+            <span class="cron-time">00</span>
+            <small class="cron-label">Segundos</small>
+        </div>
+    </main>
+
+    <footer>
+        <div class="flecha centrar" id="lst">
+            <span>&lt;</span>
+        </div>
+
+        <div class="datos">
+            <span id="nombre"></span>
+            <small id="proximoCumple"></small>
+        </div>
+
+        <div class="flecha centrar" id="nxt">
+            <span>&gt;</span>
+        </div>
+    </footer>
+
+
+
+    <!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+        <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+
+        <form action="http://httpbin.org/post" method="post">
+            <select data-placeholder="Begin typing a name to filter..." multiple class="chosen-select" name="test">
+        <option value=""></option>
+        <option>American Black Bear</option>
+        <option>Asiatic Black Bear</option>
+        <option>Brown Bear</option>
+        <option>Giant Panda</option>
+        <option>Sloth Bear</option>
+        <option>Sun Bear</option>
+        <option>Polar Bear</option>
+        <option>Spectacled Bear</option>
+    </select>
+            <input type="submit">
+        </form>
+
+
+        <script>
+            $(".chosen-select").chosen({
+                no_results_text: "Oops, nothing found!"
+            })
+        </script>
+    -->
+</body>
+
+</html>

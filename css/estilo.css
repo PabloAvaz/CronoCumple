@@ -1,0 +1,113 @@
+    /*Generales*/
+    
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        color: white;
+        background: url(../img/fondo.png) no-repeat;
+        background-size: cover;
+    }
+    
+    .centrar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-basis: 1;
+    }
+    
+    .full {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .oculto {
+        visibility: hidden;
+    }
+    /*Propios*/
+    
+    main {
+        min-height: 80vh;
+    }
+    
+    header {
+        height: 10vh;
+        width: 100vw;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 2fr 4fr 2fr;
+    }
+    
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-shadow: 2px 0 0 red, 4px 0 0 darkblue;
+        height: 10vh;
+    }
+    
+    .cron {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .cron-elem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .cron-time {
+        font-size: 80px;
+        text-shadow: 2px 0 0 red;
+    }
+    
+    .cron-label {
+        font-size: 40px;
+        text-shadow: 2px 0 0 red;
+    }
+    
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .buscador {
+        width: 80%;
+    }
+    
+    .flecha {
+        width: 20vw;
+        height: 100%;
+        transition: background-color 1s;
+    }
+    
+    .flecha:hover {
+        background-color: rgb(255, 255, 255, 0.2);
+    }
+    
+    .datos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60vw;
+    }
+    
+    .filters-form {
+        display: block;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        position: absolute;
+        color: black;
+    }
