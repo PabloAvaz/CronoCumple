@@ -1,113 +1,137 @@
-    /*Generales*/
-    
-    * {
-        padding: 0;
-        margin: 0;
-    }
-    
-    body {
-        color: white;
-        background: url(../img/fondo.png) no-repeat;
-        background-size: cover;
-    }
-    
-    .centrar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        flex-basis: 1;
-    }
-    
-    .full {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .oculto {
-        visibility: hidden;
-    }
-    /*Propios*/
-    
-    main {
-        min-height: 80vh;
-    }
-    
-    header {
-        height: 10vh;
-        width: 100vw;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        grid-template-columns: 2fr 4fr 2fr;
-    }
-    
-    footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        text-shadow: 2px 0 0 red, 4px 0 0 darkblue;
-        height: 10vh;
-    }
-    
-    .cron {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    
-    .cron-elem {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
-    }
-    
-    .cron-time {
-        font-size: 80px;
-        text-shadow: 2px 0 0 red;
-    }
-    
-    .cron-label {
-        font-size: 40px;
-        text-shadow: 2px 0 0 red;
-    }
-    
-    .search {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    
-    .buscador {
-        width: 80%;
-    }
-    
-    .flecha {
-        width: 20vw;
-        height: 100%;
-        transition: background-color 1s;
-    }
-    
-    .flecha:hover {
-        background-color: rgb(255, 255, 255, 0.2);
-    }
-    
-    .datos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 60vw;
-    }
-    
-    .filters-form {
-        display: block;
-        width: 200px;
-        height: 200px;
-        background-color: white;
-        position: absolute;
-        color: black;
-    }
+  @import url(general.css);
+  /*Propios*/
+  
+  main {
+      min-height: 80vh;
+  }
+  
+  header {
+      height: 10vh;
+      width: 100vw;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 2fr 4fr 2fr;
+  }
+  
+  footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-shadow: 2px 0 0 var(--sombra-ppal), 4px 0 0 var(--sombra-scnd);
+      height: 10vh;
+      font-size: 2rem;
+  }
+  
+  .cron {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  
+  .cron-elem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+  }
+  
+  .cron-time {
+      font-size: 13rem;
+      text-shadow: 2px 0 0 var(--sombra-ppal);
+  }
+  
+  .cron-label {
+      font-size: 5rem;
+      text-shadow: 2px 0 0 var(--sombra-ppal);
+  }
+  
+  .search {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+  }
+  
+  .buscador {
+      width: 80%;
+      height: 5vh;
+      border: none;
+      border-radius: 30px;
+      padding-left: 19px;
+      font-size: large;
+      font-weight: bold;
+      color: var(--color-azul-oscuro);
+      background-color: var(--color-blanco);
+  }
+  
+  .buscador::placeholder {
+      color: var(--color-azul-oscuro);
+  }
+  
+  .flecha {
+      width: 20vw;
+      height: 100%;
+      transition: background-color 1s;
+  }
+  
+  .flecha:hover {
+      background-color: rgb(255, 255, 255, 0.2);
+  }
+  
+  .datos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 60vw;
+  }
+  
+  .filters-form {
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-color: rgb(255, 255, 255, 0.8);
+      position: absolute;
+      color: black;
+      margin: 1px solid black;
+      box-shadow: 2px 0px 5px black;
+  }
+  
+  .modal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+      display: grid;
+      grid-template-columns: 40vw;
+      grid-template-rows: 10vh 30vh 10vh;
+      color: var(--color-negro);
+      background-color: var(--color-blanco);
+      border-radius: 1vw;
+  }
+  
+  .close {
+      position: fixed;
+      color: var(--color-gris);
+      right: 31vw;
+  }
+  
+  .modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  }
+  
+  .modal-footer button {
+      margin-right: 10px;
+  }

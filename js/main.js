@@ -69,6 +69,7 @@ window.addEventListener("load", function() {
     $("#filtros").on("click", () => {
         $(".filters-form").toggle();
     })
+
     $("input[name=filtro]").on("change", (e) => {
         const personas = $("datalist#personas option");
 
@@ -87,6 +88,22 @@ window.addEventListener("load", function() {
         });
     })
 
+    $("#nuevo").on("click", () => {
+        $("#modal").show();
+        $(".modal-content").removeClass("a-subir")
+        $(".modal-content").addClass("a-bajar")
+    })
 
+    $("#modal, .close, .btn-cancelar").on("click", () => {
+
+        $(".modal-content").removeClass("a-bajar");
+        $(".modal-content").addClass("a-subir")
+        this.setTimeout(() => { $("#modal").hide(); }, 100)
+
+    });
+
+    $(".modal-content").on("click", (evt) => {
+        evt.stopPropagation()
+    })
 
 })

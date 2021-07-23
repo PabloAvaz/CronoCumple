@@ -21,10 +21,10 @@ class ColeccionElementos extends Array {
         this.forEach((elem) => call($(elem)));
     };
     show = () => {
-        this.addClass("oculto");
+        this.removeClass("oculto");
     };
     hide = () => {
-        this.removeClass("oculto");
+        this.addClass("oculto");
     };
     toggle = () => {
         this.toggleClass("oculto");
@@ -48,9 +48,3 @@ const $ = (dir) =>
     typeof dir === "string" ?
     new ColeccionElementos(...document.querySelectorAll(dir)) :
     new ColeccionElementos(dir);
-
-$(document).on("scroll", (e) =>
-    window.scrollY != 0 ?
-    $("header").addClass("sticky") :
-    $("header").removeClass("sticky")
-);

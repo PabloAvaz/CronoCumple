@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cumples</title>
+    <title>CronoCumple</title>
     <link rel="stylesheet" href="lib/fontawesome/css/all.css" />
     <link rel="stylesheet" href="css/estilo.css" />
     <script src="js/pquery.js"></script>
@@ -16,7 +16,8 @@
 <body>
     <header>
         <div class="logo centrar">
-            <img alt="logo" />
+            <!--<img alt="logo" />
+            <h1>CronoCumple</h1>-->
         </div>
 
         <div class="search">
@@ -31,22 +32,22 @@
 
             <datalist id="personas">
           <!-- Marasecta -->
-          <option data-filter="marasecta">Juan</option>
-          <option data-filter="marasecta">Adolfo</option>
-          <option data-filter="marasecta">Dominchi</option>
-          <option data-filter="marasecta">Bugallo</option>
-          <option data-filter="marasecta">Roma</option>
-          <!-- Baloteli -->
-          <option data-filter="baloteli">Trabis</option>
-          <option data-filter="baloteli">Wokero</option>
-          <option data-filter="baloteli">zHaaldz</option>
-          <option data-filter="baloteli">Byraa</option>
-          <option data-filter="baloteli">Cesx</option>
-        </datalist>
+            <option data-filter="marasecta">Juan</option>
+            <option data-filter="marasecta">Adolfo</option>
+            <option data-filter="marasecta">Dominchi</option>
+            <option data-filter="marasecta">Bugallo</option>
+            <option data-filter="marasecta">Roma</option>
+            <!-- Baloteli -->
+            <option data-filter="baloteli">Trabis</option>
+            <option data-filter="baloteli">Wokero</option>
+            <option data-filter="baloteli">zHaaldz</option>
+            <option data-filter="baloteli">Byraa</option>
+            <option data-filter="baloteli">Cesx</option>
+            </datalist>
         </div>
 
         <div class="otros centrar">
-            <span> Añadir(+)</span>
+            <i id="nuevo" class="fas fa-plus"></i>
         </div>
     </header>
     <main class="cron">
@@ -92,8 +93,32 @@
     </footer>
 
 
+    <div id="modal" class="modal oculto">
+        <div class="modal-content">
 
-    <!--
+            <div class="modal-header centrar">
+                <h1>Nueva persona</h1>
+                <span class="close">x</span>
+            </div>
+
+            <div class="modal-body">
+                <hr>
+                <label>Nombre</label><br>
+                <input type="text"><br>
+                <label>Cumple</label><br>
+                <input type="date"><br>
+                <label>Tags</label><br>
+                <input type="text"><br>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-cancelar">Cancelar</button>
+                <button class="btn btn-enviar">Crear</button>
+            </div>
+        </div>
+
+
+
+        <!--
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
         <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
@@ -121,5 +146,7 @@
         </script>
     -->
 </body>
+
+</html>
 
 </html>

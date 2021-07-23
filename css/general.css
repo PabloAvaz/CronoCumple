@@ -1,0 +1,75 @@
+/*Generales*/
+
+:root {
+    --duracion-anim: 100;
+    --sombra-ppal: red;
+    --sombra-scnd: darkblue;
+    --color-blanco: white;
+    --color-negro: black;
+    --color-gris: gray;
+    --color-azul-oscuro: #01404F;
+    --tam-icono: 30px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: white;
+    background: url(../img/fondo.png) no-repeat;
+    background-size: cover;
+}
+
+.centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 1;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+}
+
+.oculto {
+    visibility: hidden;
+}
+
+.fas {
+    width: var(--tam-icono);
+    height: var(--tam-icono);
+    font-size: var(--tam-icono);
+}
+
+
+/*Animaciones*/
+
+.a-bajar {
+    animation: bajar var(--duracion-anim) linear;
+}
+
+.a-subir {
+    animation: subir var(--duracion-anim) linear;
+}
+
+@keyframes bajar {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-100px);
+    }
+}
